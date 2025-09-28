@@ -10,3 +10,5 @@
 Este proyecto tiene como objetivo facilitar la venta y compra de eventos segura, incluyendo:
 
 
+### Autores
+#### Dario Collar y Alejandro Cernada
