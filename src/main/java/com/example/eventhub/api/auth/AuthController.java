@@ -1,5 +1,7 @@
 package com.example.eventhub.api.auth;
 
+import com.example.eventhub.api.auth.dto.LoginRequest;
+import com.example.eventhub.api.auth.dto.LoginResponse;
 import com.example.eventhub.api.auth.dto.RegisterRequest;
 import com.example.eventhub.api.auth.dto.RegisterResponse;
 import com.example.eventhub.service.auth.AuthService;
@@ -21,8 +23,16 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<RegisterResponse> register(@Valid @RequestBody RegisterRequest req) {
-        RegisterResponse res=authService.register(req);
+        RegisterResponse res = authService.register(req);
 
-        return ResponseEntity.status(200).body(res) ;
+        return ResponseEntity.status(200).body(res);
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<LoginResponse> login(@Valid @RequestBody LoginRequest req) {
+        LoginResponse res = authService.login(req);
+        
+        return ResponseEntity.status(200).body(res);
+    }
+
 }
